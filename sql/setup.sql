@@ -6,6 +6,6 @@ CREATE TABLE users (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   first_name TEXT NOT NULL,
   last_name TEXT NOT NULL,
-  email TEXT NOT NULL,
+  email TEXT NOT NULL UNIQUE,   -- add unique here so that multiple users can't be created with the same email
   password_hash TEXT NOT NULL
 );
