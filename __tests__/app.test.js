@@ -28,7 +28,7 @@ const registerAndLogin = async (userProps = {}) => {
   return [agent, user];
 };
 
-describe('lazy-bouncer routes', () => {
+describe.only('lazy-bouncer routes', () => {
   beforeEach(() => {
     return setup(pool);
   });
